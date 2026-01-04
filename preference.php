@@ -15,7 +15,7 @@ $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $value = $_POST['theme'] ?? 'light';
     // Persist for 30 days
-    setcookie('theme', $value, time() + 15, '/', '', false, true);
+    setcookie('theme', $value, time() + 86400*30, '/', '', false, true);
     $theme = $value;
     $message = 'Theme updated.';
 }
